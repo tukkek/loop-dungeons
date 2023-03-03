@@ -1,0 +1,3 @@
+[submodule "reference/minim"]
+	path = reference/minim
+	url = https://github.com/tukkek/minim/
