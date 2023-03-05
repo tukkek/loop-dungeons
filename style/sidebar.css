@@ -1,0 +1,36 @@
+#sidebar{
+  background-color:grey;
+  display:grid;
+  grid-auto-flow:row;
+  padding:1em;
+  align-content:space-between;
+}
+#sidebar>div{
+  min-height:2em;
+  background-color:darkgrey;
+  width:90%;
+  padding:0% 5%;
+  border:outset black 2px;
+  border-radius:.5em;
+}
+#sidebar #vitals>div{
+  display:grid;
+  grid-auto-flow:column;
+  font-size:large;
+  font-weight:bold;
+}
+#sidebar #vitals .label{
+  font-weight:normal;
+}
+#sidebar #keys,#sidebar #controls{
+  display:grid;
+  grid-template-columns:30% 30% 30%;
+  justify-content:space-between;
+  grid-gap:.5em;
+  padding-top:.5em;
+  padding-bottom:.5em;
+}
+#sidebar .active{
+  border-color:gold;
+  background-color:lightgrey;
+}

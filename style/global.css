@@ -1,0 +1,16 @@
+body{
+  display:grid;
+  width:100%;
+  grid-template-columns:80% 20%;
+  height:100%;
+  grid-auto-flow:column;
+  margin:0;
+  padding:0;
+  background:black;
+}
+.item{
+  width:4em;
+  height:4em;
+  background-color:grey;
+  border:1px solid ivory;
+}

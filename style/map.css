@@ -1,0 +1,12 @@
+#map{
+  display:grid;
+  grid-auto-flow:row;
+  grid-gap:0;
+  align-content:center;
+  justify-content:center;
+}
+#map .cell{
+  width:32px;
+  height:32px;
+  color:white;
+}
