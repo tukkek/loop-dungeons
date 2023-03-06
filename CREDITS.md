@@ -1,0 +1,3 @@
+- Programming: [Alex Henry](https://github.com/tukkek)
+- Art: [Felix](https://github.com/AKindOfFelix)
+- Music: [Alberto Martino](https://www.albertomartino.com/)
