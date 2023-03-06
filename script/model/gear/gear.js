@@ -1,0 +1,1 @@
+var s=0,t=1,e=2,l=3,o=4,r=[s,t,e,l,o];class a{constructor(s,t){this.name=s,this.slot=t,this.level=1}}export{s as weapon,t as support,e as body,l as head,o as boots,r as slots,a as Gear};

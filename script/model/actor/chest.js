@@ -1,1 +1,0 @@
-import*as o from"./actor.js";import*as r from"../../control/engine.js";class t extends o.Actor{constructor(){super()}activate(){r.floor.remove(this)}}export{t as Chest};

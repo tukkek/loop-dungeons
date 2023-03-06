@@ -1,0 +1,1 @@
+import*as s from"../actor.js";import*as r from"../../../gear/gear.js";const e="enemies/slimes/slime2.gif";class t extends s.Actor{constructor(){super(e,3,3,3),this.hp=5,this.xp=0,this.gear=new Array(r.slots.length)}}export{t as Hero};

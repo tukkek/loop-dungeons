@@ -10,3 +10,6 @@
   height:32px;
   color:white;
 }
+#map img{
+  position:absolute;
+}

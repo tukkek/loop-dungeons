@@ -7,6 +7,8 @@
 <link rel='stylesheet' href='style/map.css'>
 <script type="text/javascript" src="library/pathfinding-browser.js"></script>
 
+<audio id='intro' src='assets/music/7DRL-LD-V2-intro-nodrum.mp3'></audio>
+
 <div id='map'><template id='cell'><div class='cell'></div></template></div>
 <div id='sidebar'>
   <div id='vitals'>
@@ -19,6 +21,7 @@
       <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
     </div>
   </div>
+  <div id='messages'></div>
   <div id='keys'>
     <div class='item'></div><div class='item'></div><div class='item'></div>
     <div class='item'></div><div class='item'></div><div class='item'></div>
@@ -35,7 +38,13 @@
     <div class='item'></div>
   </div>
 </div>
-<div id='hotbar'><div class='item'></div><div class='item'></div><div class='item'></div><div class='item'></div><div class='item'></div></div>
+<div id='hotbar'>
+  <div class='item'></div>
+  <div class='item'></div>
+  <div class='item'></div>
+  <div class='item'></div>
+  <div class='item'></div>
+</div>
 
 <script type='module'>
   import * as engine from './script/control/engine.js'

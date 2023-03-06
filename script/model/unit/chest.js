@@ -1,0 +1,1 @@
+import*as t from"./unit.js";import*as e from"../../control/engine.js";class o extends t.Unit{constructor(){super("stages/purple/Purple_chest 1.png"),this.height=64}activate(){this.remove(),e.loot(e.floor.challenge())}}export{o as Chest};

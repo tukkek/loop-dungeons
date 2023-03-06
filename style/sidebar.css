@@ -3,7 +3,7 @@
   display:grid;
   grid-auto-flow:row;
   padding:1em;
-  align-content:space-between;
+  align-content:space-evenly;
 }
 #sidebar>div{
   min-height:2em;
@@ -18,9 +18,17 @@
   grid-auto-flow:column;
   font-size:large;
   font-weight:bold;
+  text-align:center;
 }
 #sidebar #vitals .label{
   font-weight:normal;
+  text-align:left;
+}
+#sidebar #vitals #hp span.full{
+  color:red;
+}
+#sidebar #vitals #xp span.full{
+  color:white;
 }
 #sidebar #keys,#sidebar #controls{
   display:grid;
@@ -33,4 +41,21 @@
 #sidebar .active{
   border-color:gold;
   background-color:lightgrey;
+}
+#sidebar #messages{
+  height:10em;
+  background-color:black;
+  overflow-y:scroll;
+}
+#sidebar #messages p{
+  color:white;
+  padding:0;
+  margin:0;
+  font-family:monospace;
+}
+#sidebar #messages p:first-child{
+  margin-top:.5em;
+}
+#sidebar #messages p.warning{
+  color:yellow;
 }

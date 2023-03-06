@@ -1,1 +1,0 @@
-import*as r from"./actor.js";class o extends r.Actor{constructor(){super()}}export{o as Hero};
