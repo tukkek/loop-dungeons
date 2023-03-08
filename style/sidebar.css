@@ -31,7 +31,7 @@
   display:grid;
   grid-template-columns: repeat(6,15%);
   justify-content: space-evenly;
-  font-size: 1.5em;
+  font-size:1.4em;
 }
 #sidebar #vitals #hp span.full{
   color:red;

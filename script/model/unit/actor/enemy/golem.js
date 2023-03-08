@@ -1,0 +1,1 @@
+import*as e from"../actor.js";import*as t from"../../../../view/sidebar.js";const s="enemies/golem/stonegolem1_idle_down.gif";class o extends e.Actor{constructor(){super("Golem",s,4),--this.speed,this.force+=1,this.height=48}hit(e,s){return e==this&&this.roll(this.force)&&(t.warn("The golem hits extra hard!"),s.damage()),!0}}export{o as Golem};
