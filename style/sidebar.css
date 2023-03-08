@@ -125,5 +125,5 @@
   background-image:url('../assets/UI/button_climb.png');
 }
 #sidebar #climb.active{
-  background-image:url('../assets/UI/button_Interact pressed.png');
+  background-image:url('../assets/UI/button_climb pressed.png');
 }
