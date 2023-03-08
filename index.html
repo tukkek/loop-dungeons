@@ -1,13 +1,15 @@
-<title>Loop dungeons</title>
+<title>Loop dungeons (build 2023-02-08 06:51)</title>
 
 <meta charset='utf8'>
 <link rel='stylesheet' href='style/global.css'>
 <link rel='stylesheet' href='style/sidebar.css'>
 <link rel='stylesheet' href='style/hotbar.css'>
 <link rel='stylesheet' href='style/map.css'>
+<link rel='stylesheet' href='style/help.css'>
 <script type="text/javascript" src="library/pathfinding-browser.js"></script>
+<script type="text/javascript" src="library/loopify.js"></script>
 
-<audio id='intro' src='assets/music/7DRL-LD-V2-intro-nodrum.mp3'></audio>
+<audio id='intro' src='assets/music/music-alberto_martino-intro-wip.mp3'></audio>
 
 <div id='map'><template id='cell'><div class='cell'></div></template></div>
 <div id='sidebar'>
@@ -27,23 +29,37 @@
     <div class='item'></div><div class='item'></div><div class='item'></div>
   </div>
   <div id='controls'>
-    <div class='item'></div>
+    <div id='interact' class='item'><img></img></div>
+    <div id='climb' class='item'></div>
+    <div id='help' class='item'></div>
+    <div id='fight' class='item'></div>
     <div id='north' class='item'></div>
-    <div class='item'></div>
+    <div id='explore' class='item'></div>
     <div id='west' class='item'></div>
     <div id='south' class='item'></div>
     <div id='east' class='item'></div>
-    <div class='item'></div>
-    <div id='explore' class='item'></div>
-    <div class='item'></div>
   </div>
 </div>
+<div id='gear' class='hidden panel'>
+  <strong class='name'></strong>, level <span class='level'></span>
+  <p><span class='chance'>100</span>% chance to:</p>
+  <ul><li class='effect'></li></ul>
+  <p class='upgrading'>(Click on the numeral icon to upgrade).</p>
+</div>
 <div id='hotbar'>
-  <div class='item'></div>
-  <div class='item'></div>
-  <div class='item'></div>
-  <div class='item'></div>
-  <div class='item'></div>
+  <template id='numeral'><div class='numeral'></div></template>
+  <div id='hotbar1' class='item'></div>
+  <div id='hotbar2' class='item'></div>
+  <div id='hotbar3' class='item'></div>
+  <div id='hotbar4' class='item'></div>
+  <div id='hotbar5' class='item'></div>
+</div>
+<div id='instructions' class='hidden panel'>
+  <p>Welcome to Loop Dungeons! Your goal is to delve further into the depths of this strange, spooky place.</p>
+  <p>Along the way you may have to face and fight monsters. You will also find rewards, which will help you advance your knowledge and grow stronger. As you spend time studying these treasures you will also gain back a certain amount of health.</p>
+  <p>As you gain experience, your ability to handle your items will improve - and you must choose on which pieces of gear to specialize. Treasure chests can also have new items and deciding which ones to take and which ones to leave will be crucial to your survival!</p>
+  <p>Each piece of gear you equip has a special ability (you can hover over them to read more about each item). You can use these abilities, during combat with your enemies. After using an item ability, you will need to wait a certain amount of time before using another.</p>
+  <p>You can use the auto-explore and auto-fight options to let the game take over for you and you can turn them off when a situation requires more caution. There will be multiple game difficulties, allowing you to play the game more or less casually as you prefer.</p>
 </div>
 
 <script type='module'>

@@ -5,6 +5,52 @@
   display:grid;
   grid-auto-flow:column;
   grid-gap:1em;
-  padding:.65em;
-  border-radius:0 1em 0 0;
+  padding:.5em;
+  border-radius:0 .5em 0 0;
+}
+#hotbar .item{
+  filter:drop-shadow(.2em .2em .2em black);
+  background-size:fit;
+}
+#gear{
+  position:fixed;
+  left:1em;
+  bottom:6em;
+  background-color:black;
+  background-color:black;
+  border-width:.2em;
+  max-width:20em;
+}
+#gear .effect{
+  font-style:italic;
+}
+#gear .name{
+  text-decoration:underline;
+}
+#hotbar .item .numeral{
+  position:absolute;
+  bottom:0em;
+  right:0.2em;
+  color:white;
+  font-size:1.5em;
+  text-shadow:.1em .1em .2em black;
+}
+#hotbar .item.active{
+  border-color:cyan;
+  background-color:darkgrey;
+}
+#hotbar .item.cooling{
+  opacity:.2;
+}
+@keyframes upgrade{
+  50%{
+    color:gold;
+    border-color:darkblue;
+  }
+}
+#hotbar .item.upgrade,#hotbar .item.upgrade .numeral{
+  animation:upgrade infinite 2s;
+}
+#gear .upgrading{
+  font-size:small;
 }

@@ -1,1 +1,1 @@
-import*as r from"../../../gear/weapon.js";import*as o from"../../../gear/iron.js";class a{constructor(r){this.gear=r}apply(r){for(var o of this.gear.map(r=>new r))r.gear[o.slot]=o}}var e=new a([r.Sword,o.Helm,o.Shield,o.Boots,o.Mail]);export{e as knight};
+import*as r from"../../../gear/iron.js";class o{constructor(r){this.gear=r}apply(r){for(var o of this.gear.map(r=>new r))r.equip(o)}}var a=new o([r.Sword,r.Helm,r.Shield,r.Boots,r.Mail]),e=[a];export{a as knight,e as kits};

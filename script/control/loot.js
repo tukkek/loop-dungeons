@@ -1,0 +1,1 @@
+import*as r from"../model/unit/actor/hero/kit.js";import*as e from"./rpg.js";const o=Array.from(new Set(r.kits.flatMap(r=>r.gear)));function t(r){let t=e.pick(o);return(t=new t).level=r,t}export{t as generate};

@@ -13,3 +13,6 @@
 #map img{
   position:absolute;
 }
+#map img.hero{
+  filter:drop-shadow(.1em .1em .1em black);
+}

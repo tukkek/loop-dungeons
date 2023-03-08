@@ -1,1 +1,1 @@
-var e=document.querySelector("audio#intro");export{e as intro};
+import*as o from"./engine.js";const e=188;var n=document.querySelector("audio#intro"),t="assets/music/Alberto_Martino-loop-faster-WIP_loopable.wav",r=[],i=!1,f=0;function a(o){setInterval(()=>{for(var o of r)o()},o)}function s(o){i!=o&&(i=o,loopify(o,function(o,e){if(o)return console.err(o);a(f),e.play()}))}function l(o){i&&i.stop(),(i=o).play()}function u(){if(o.debug)a(100);else for(;f<1e3;)f+=6e4/e}export{n as intro,t as gameplay,r as listeners,s as loop,l as play,u as setup};

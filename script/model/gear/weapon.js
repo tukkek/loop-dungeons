@@ -1,1 +1,0 @@
-import*as r from"./gear.js";class s extends r.Gear{constructor(s){super(s,r.weapon)}}class e extends s{constructor(){super("Long sword")}}export{e as Sword};

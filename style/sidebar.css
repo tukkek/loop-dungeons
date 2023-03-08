@@ -1,15 +1,18 @@
 #sidebar{
   background-color:grey;
   display:grid;
-  grid-auto-flow:row;
+  grid-template-rows:auto 1fr auto auto;
   padding:1em;
-  align-content:space-evenly;
+  align-content:space-between;
+  grid-gap:2em;
+  max-height:100vh;
 }
 #sidebar>div{
-  min-height:2em;
-  background-color:darkgrey;
   width:90%;
   padding:0% 5%;
+}
+#sidebar #vitals{
+  background-color:darkgrey;
   border:outset black 2px;
   border-radius:.5em;
 }
@@ -24,6 +27,12 @@
   font-weight:normal;
   text-align:left;
 }
+#sidebar #vitals #hp,#sidebar #vitals #xp{
+  display:grid;
+  grid-template-columns: repeat(6,15%);
+  justify-content: space-evenly;
+  font-size: 1.5em;
+}
 #sidebar #vitals #hp span.full{
   color:red;
 }
@@ -32,30 +41,89 @@
 }
 #sidebar #keys,#sidebar #controls{
   display:grid;
-  grid-template-columns:30% 30% 30%;
-  justify-content:space-between;
-  grid-gap:.5em;
-  padding-top:.5em;
-  padding-bottom:.5em;
-}
-#sidebar .active{
-  border-color:gold;
-  background-color:lightgrey;
+  grid-template-columns:min-content min-content min-content;
+  justify-content:center;
 }
 #sidebar #messages{
-  height:10em;
   background-color:black;
   overflow-y:scroll;
+  font-family:monospace;
+  font-size:1.1em;
 }
 #sidebar #messages p{
   color:white;
   padding:0;
   margin:0;
-  font-family:monospace;
 }
 #sidebar #messages p:first-child{
   margin-top:.5em;
 }
 #sidebar #messages p.warning{
   color:yellow;
+}
+#sidebar .item{
+  border:none;
+  background-image:url('../assets/UI/button_empty.png');
+}
+#sidebar #interact.looting{
+  background-image:url('../assets/UI/button_empty.png');
+}
+#sidebar #interact img{
+  height:80%;
+  padding-top:.2em;
+  padding-left:.3em;
+}
+#sidebar #fight{
+  background-image:url('../assets/UI/button_autobattle.png');
+}
+#sidebar #fight.active{
+  background-image:url('../assets/UI/button_autobattle pressed.png');
+}
+#sidebar #explore{
+  background-image:url('../assets/UI/button_autoexplore.png');
+}
+#sidebar #explore.active{
+  background-image:url('../assets/UI/button_autoexplore pressed.png');
+}
+#sidebar #south{
+  background-image:url('../assets/UI/button_down.png');
+}
+#sidebar #south.active{
+  background-image:url('../assets/UI/button_down pressed.png');
+}
+#sidebar #help{
+  background-image:url('../assets/UI/button_help.png');
+}
+#sidebar #help.active{
+  background-image:url('../assets/UI/button_help pressed.png');
+}
+#sidebar #interact{
+  background-image:url('../assets/UI/button_Interact.png');
+}
+#sidebar #interact.active{
+  background-image:url('../assets/UI/button_Interact pressed.png');
+}
+#sidebar #west{
+  background-image:url('../assets/UI/button_left.png');
+}
+#sidebar #west.active{
+  background-image:url('../assets/UI/button_left pressed.png');
+}
+#sidebar #east{
+  background-image:url('../assets/UI/button_right.png');
+}
+#sidebar #east.active{
+  background-image:url('../assets/UI/button_right pressed.png');
+}
+#sidebar #north{
+  background-image:url('../assets/UI/button_up.png');
+}
+#sidebar #north.active{
+  background-image:url('../assets/UI/button_up pressed.png');
+}
+#sidebar #climb{
+  background-image:url('../assets/UI/button_climb.png');
+}
+#sidebar #climb.active{
+  background-image:url('../assets/UI/button_Interact pressed.png');
 }

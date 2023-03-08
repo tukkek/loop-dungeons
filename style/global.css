@@ -7,10 +7,36 @@ body{
   margin:0;
   padding:0;
   background:black;
+  image-rendering:crisp-edges;
+  overflow:hidden;
 }
 .item{
   width:4em;
   height:4em;
   background-color:grey;
   border:1px solid ivory;
+  background-size:contain;
+  cursor:pointer;
 }
+.helping .item{
+  background-image:none!important;
+  background-color:darkgrey!important;
+  border:1px black solid!important;
+  text-align:center;
+  font-weight:bold;
+  color:yellow;
+  text-shadow:.1em .1em .2em black;
+}
+.hidden{
+  display:none;
+}
+.panel{
+  position:fixed;
+  background-color:black;
+  border:.5em inset white;
+  z-index:10;
+  font-family:sans-serif;
+  color:white;
+  padding:1em;
+}
+
