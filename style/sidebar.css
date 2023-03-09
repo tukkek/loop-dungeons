@@ -126,8 +126,8 @@
   background-image:url('../assets/UI/button_up pressed.png');
 }
 #sidebar #climb{
-  background-image:url('../assets/UI/button_climb.png');
+  background-image:url('../assets/UI/staircase.png');
 }
 #sidebar #climb.active{
-  background-image:url('../assets/UI/button_climb pressed.png');
+  background-image:url('../assets/UI/staircase pressed.png');
 }
