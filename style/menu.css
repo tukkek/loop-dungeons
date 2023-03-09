@@ -1,0 +1,104 @@
+#menu{
+  position:fixed;
+  top:0;
+  left:0;
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  background-image:url('../assets/UI/MainArtwork.png');
+  background-size:cover;
+}
+#menu #credits{
+  position:fixed;
+  right:1em;
+  top:1em;
+  color:white;
+  font-family:monospace;
+  font-size:1.3em;
+  text-align:right;
+  font-weight:bold;
+}
+#menu #credits div{
+  margin-bottom:.5em;
+}
+#menu h1{
+  color:yellow;
+  font-size:4em;
+  white-space:nowrap;
+  margin-top:.25em;
+  font:serif;
+  text-shadow:.1em .1em .5em violet;
+  text-decoration:underline;
+  position:fixed;
+  left:40%;
+}
+#menu .controls{
+  position:relative;
+  left:48%;
+  height:95%;
+  width:25%;
+  display:grid;
+  font-size:2em;
+  justify-items:center;
+  grid-template-rows:20% min-content 1fr min-content min-content;
+  grid-gap:.5em;
+  color:white;
+}
+#menu #kit{
+  text-align:center;
+}
+#menu #kit button{
+  font-size:.7em;
+  border:none;
+  margin:.2em;
+  font-family:serif;
+  border-bottom:.2em solid white;
+}
+#menu #kit .selected{
+  border-bottom:.2em solid gold;
+  animation:shimmer 2s infinite;
+}
+#menu .description{
+  font-size:.9em;
+  display:grid;
+  align-content:center;
+  border:.1em ;
+  font-style:italic;
+  padding:1em;
+  text-align:center;
+  font-family:monospace;
+}
+#menu #difficulty{
+  text-align:center;
+}
+#menu button{
+  font-size:1em;
+  background-color:black;
+  color:white;
+  cursor:pointer;
+  border:.1em solid white;
+} 
+#menu #difficulty button{
+  margin:.1em;
+  font-size:.8em;
+}
+@keyframes shimmer{
+  50%{border-color:yellow;}
+}
+#menu #difficulty button{
+  border:none;
+}
+#menu #difficulty button.selected{
+  border:.1em solid gold;
+  animation:shimmer 1s infinite;
+  border-radius:.5em;
+}
+#menu #start{
+  border:none ;
+  font-weight:bold;
+  margin-top:1em;
+  transition:color .6s,text-shadow .6s;
+  color:gold;
+  text-shadow:.1em .1em .4em blue;
+}

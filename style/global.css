@@ -28,7 +28,7 @@ body{
   text-shadow:.1em .1em .2em black;
 }
 .hidden{
-  display:none;
+  display:none!important;
 }
 .panel{
   position:fixed;

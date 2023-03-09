@@ -39,10 +39,14 @@
 #sidebar #vitals #xp span.full{
   color:white;
 }
-#sidebar #keys,#sidebar #controls{
+#sidebar #bag,#sidebar #controls{
   display:grid;
   grid-template-columns:min-content min-content min-content;
   justify-content:center;
+}
+#sidebar #bag .item img{
+  width:90%;
+  padding-left: .2em;
 }
 #sidebar #messages{
   background-color:black;

@@ -1,1 +1,1 @@
-import*as r from"../../control/rpg.js";import*as s from"./floor.js";import*as o from"../../control/engine.js";const t=2;class n{constructor(){this.floors=[];for(let o=1;o<=5;o+=r.chancein(t)?1:0)this.floors.push(new s.Floor(o))}}export{n as Dungeon};
+import*as r from"../../control/rpg.js";import*as s from"./floor.js";import*as o from"./arena.js";import*as t from"../../control/engine.js";const n=2;class a{constructor(){this.floors=[];for(let o=1;o<=4;o+=r.chancein(n)?1:0)this.floors.push(new s.Floor(o));this.floors.push(new o.Arena)}}export{a as Dungeon};

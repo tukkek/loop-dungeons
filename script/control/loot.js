@@ -1,1 +1,1 @@
-import*as r from"../model/unit/actor/hero/kit.js";import*as e from"./rpg.js";const o=Array.from(new Set(r.kits.flatMap(r=>r.gear)));function t(r){let t=e.pick(o);return(t=new t).level=r,t}export{t as generate};
+import*as o from"../model/unit/actor/hero/kit.js";import*as e from"../model/trinket/potion.js";import*as t from"./rpg.js";import*as n from"./engine.js";const i=Array.from(new Set(o.kits.flatMap(o=>o.gear)));function r(o=n.floor.challenge()){if(t.chancein(2))return new e.Potion(o);let r=t.pick(i);return(r=new r).level=o,r}export{r as generate};

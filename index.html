@@ -1,18 +1,21 @@
-<title>Loop dungeons (build 2023-02-09 00:18)</title>
-
+<title>Loop dungeons (build 2023-02-09 07:08)</title>
 <meta charset='utf8'>
+
 <link rel='stylesheet' href='style/global.css'>
 <link rel='stylesheet' href='style/sidebar.css'>
 <link rel='stylesheet' href='style/hotbar.css'>
 <link rel='stylesheet' href='style/map.css'>
 <link rel='stylesheet' href='style/help.css'>
+<link rel='stylesheet' href='style/menu.css'>
+
 <script type="text/javascript" src="library/pathfinding-browser.js"></script>
 <script type="text/javascript" src="library/loopify.js"></script>
 
-<audio id='intro' src='assets/music/music-alberto_martino-intro-wip.mp3'></audio>
+<audio preload id='intro' src='assets/music/music-alberto_martino-intro-wip.mp3'></audio>
+<audio preload src='assets/music/Alberto_Martino-OST-LoopDungeon-LoonleyLoop (dungeon theme).ogg'></audio>
 
 <div id='map'><template id='cell'><div class='cell'></div></template></div>
-<div id='sidebar'>
+<div id='sidebar' class='hidden'>
   <div id='vitals'>
     <div id='hp'>
       <span class='label'>HP</span>
@@ -24,9 +27,13 @@
     </div>
   </div>
   <div id='messages'></div>
-  <div id='keys'>
-    <div class='item'></div><div class='item'></div><div class='item'></div>
-    <div class='item'></div><div class='item'></div><div class='item'></div>
+  <div id='bag'>
+    <div class='item'><img></img></div>
+    <div class='item'><img></img></div>
+    <div class='item'><img></img></div>
+    <div class='item'><img></img></div>
+    <div class='item'><img></img></div>
+    <div class='item'><img></img></div>
   </div>
   <div id='controls'>
     <div id='interact' class='item'><img></img></div>
@@ -46,7 +53,7 @@
   <ul><li class='effect'></li></ul>
   <p class='upgrading'>(Click on the numeral icon to upgrade).</p>
 </div>
-<div id='hotbar'>
+<div id='hotbar' class='hidden'>
   <template id='numeral'><div class='numeral'></div></template>
   <div id='hotbar1' class='item'></div>
   <div id='hotbar2' class='item'></div>
@@ -61,8 +68,30 @@
   <p>Each piece of gear you equip has a special ability (you can hover over them to read more about each item). You can use these abilities, during combat with your enemies. After using an item ability, you will need to wait a certain amount of time before using another.</p>
   <p>You can use the auto-explore and auto-fight options to let the game take over for you and you can turn them off when a situation requires more caution. There will be multiple game difficulties, allowing you to play the game more or less casually as you prefer.</p>
 </div>
+<div id='menu'>
+  <div id='credits'>
+    <div>Concept: Alex Henry <a target='_blank' href='https://discord.gg/5sXXcwPCSP'>⌂</a></div>
+    <div>Art: A Kind Of Felix <a target='_blank' href='https://www.artstation.com/flucx'>⌂</a></div>
+    <div>Music: Alberto Martino <a target='_blank' href='https://albertomartino.bandcamp.com/releases'>⌂</a></div>
+    <div>Programming: Alex Henry <a target='_blank' href='https://discord.gg/5sXXcwPCSP'>⌂</a></div>
+  </div>
+  <h1>Loop dungeons</h1>
+  <div class='controls'>
+    <div></div>
+    <div id='kit'></div>
+    <div class='description'></div>
+    <div id='difficulty'>
+      <div><button>Easy</button></div>
+      <div><button class='selected'>Medium</button></div>
+      <div><button>Hard</button></div>
+    </div>
+    <div><button id='start'>New game</button></div>
+  </div>
+</div>
 
 <script type='module'>
   import * as engine from './script/control/engine.js'
-  engine.setup()
+  import * as menu from './script/view/menu.js'
+  if(!engine.debug) document.addEventListener('contextmenu',e=>event.preventDefault());
+  menu.setup()
 </script>
