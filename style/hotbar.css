@@ -21,6 +21,7 @@
   background-color:black;
   border-width:.2em;
   max-width:20em;
+  z-index:20;
 }
 #gear .effect{
   font-style:italic;

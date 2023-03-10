@@ -1,4 +1,5 @@
-<title>Loop dungeons (build 2023-02-09 15:41)</title>
+<!DOCTYPE html>
+<title>Loop dungeons (build 2023-02-10 07:41)</title>
 <meta charset='utf8'>
 
 <link rel='stylesheet' href='style/global.css'>
@@ -7,11 +8,12 @@
 <link rel='stylesheet' href='style/map.css'>
 <link rel='stylesheet' href='style/help.css'>
 <link rel='stylesheet' href='style/menu.css'>
+<link rel='stylesheet' href='style/scape.css'>
 
 <script type="text/javascript" src="library/pathfinding-browser.js"></script>
 <script type="text/javascript" src="library/loopify.js"></script>
 
-<audio preload id='intro' src='assets/music/music-alberto_martino-intro-wip.mp3'></audio>
+<audio preload id='intro' src='assets/music/music-alberto_martino-intro-drum-wip.mp3'></audio>
 <audio preload src='assets/music/Alberto_Martino-OST-LoopDungeon-LoonleyLoop (dungeon theme).ogg'></audio>
 
 <div id='map'><template id='cell'><div class='cell'></div></template></div>
@@ -86,7 +88,13 @@
       <div><button>Hard</button></div>
     </div>
     <div><button id='start'>New game</button></div>
+    <div id='fullscreen'>Better played in full-screen!</div>
   </div>
+</div>
+<div id='scape' class='hidden'>
+  <div class='message'></div>
+  <img class='unit'></img>
+  <img class='unit'></img>
 </div>
 
 <script type='module'>

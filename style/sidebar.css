@@ -5,7 +5,6 @@
   padding:1em;
   align-content:space-between;
   grid-gap:2em;
-  max-height:100vh;
 }
 #sidebar>div{
   width:90%;

@@ -2,7 +2,7 @@ body{
   display:grid;
   width:100%;
   grid-template-columns:80% 20%;
-  height:100%;
+  height:100vh;
   grid-auto-flow:column;
   margin:0;
   padding:0;

@@ -41,7 +41,7 @@
   display:grid;
   font-size:2em;
   justify-items:center;
-  grid-template-rows:20% min-content 1fr min-content min-content;
+  grid-template-rows:20% min-content 1fr min-content min-content min-content;
   grid-gap:.5em;
   color:white;
 }
@@ -101,4 +101,10 @@
   transition:color .6s,text-shadow .6s;
   color:gold;
   text-shadow:.1em .1em .4em blue;
+}
+#menu #fullscreen{
+  font-size:.6em;
+  font-weight:bold;
+  color:lightgreen;
+  text-shadow:.1em .1em .1em purple;
 }

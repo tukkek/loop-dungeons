@@ -13,7 +13,20 @@
 #map img{
   position:absolute;
 }
-#map img.hero{
+#map .hero{
   filter:drop-shadow(.1em .1em .1em black);
   transition:top .2s, left .2s;
+  content:url('../assets/player/hero/Hero_idle_down.gif');
+}
+#map .hero[move='north']{
+  content:url('../assets/player/hero/Hero_idle_up.gif');
+}
+#map .hero[move='east']{
+  content:url('../assets/player/hero/Hero_idle_right.gif');
+}
+#map .hero[move='south']{
+  content:url('../assets/player/hero/Hero_idle_down.gif');
+}
+#map .hero[move='west']{
+  content:url('../assets/player/hero/Hero_idle_left.gif');
 }

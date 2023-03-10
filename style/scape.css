@@ -1,0 +1,154 @@
+#scape{
+  position:fixed;
+  width:70%;
+  height:70%;
+  bottom:10em;
+  left:4em;
+  background-color:black;
+  border:slategray .2em inset;
+  z-index:10;
+  background-size:100% auto;
+  background-position:bottom;
+  overflow-x: hidden;
+}
+#scape.purple{
+  background-image:url('../assets/Fighting Scene/Stages/Fightingscene_purple.png');
+}
+@keyframes fade{
+  0%{opacity:100%}
+  50%{opacity:100%}
+  100%{opacity:0%}
+}
+#scape .message{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  color:gold;
+  text-align:center;
+  font-family:monospace;
+  margin-top:1em;
+  font-size:2em;
+  font-style:italic;
+  animation:fade 2s 1;
+  opacity:0;
+}
+#scape .unit{
+  bottom:1em;
+  position:absolute;
+  height:50%;
+  transition:transform 1s,filter 1s;
+}
+#scape .unit:first-of-type{
+  left:20%;
+}
+#scape .unit:last-of-type{
+  right:20%;
+  transform:scaleX(-1);
+}
+#scape .message.miss{
+  color:ivory;
+}
+#scape .message.dodge{
+  color:ivory;
+}
+#scape .message.intro{
+  color:ivory;
+}
+#scape .message.attack{
+  color:ivory;
+}
+#scape .unit.hero{
+  content:url('../assets/Fighting Scene/player/hero/fight_hero_sword_and_shield-idle.gif');
+}
+@keyframes heroattack{
+  0%{transform:translateX(0em);}
+  100%{transform:translateX(+5em);}
+}
+#scape .hero.attack,#scape .hero.castattack{
+  content:url('../assets/Fighting Scene/player/hero/fight_hero_sword_and_shield-attack.gif');
+  animation:heroattack .5s 1;
+  transform:translateX(+5em);
+}
+@keyframes herododge{
+  0%{transform:translateX(0em);}
+  50%{transform:translateX(-3em);}
+  100%{transform:translateX(0em);}
+}
+#scape .hero.dodge,#scape .hero.castdodge{
+  content:url('../assets/Fighting Scene/player/hero/fight_hero_sword_and_shield-block.gif');
+  animation:herododge .5s 1;
+  transform:translateX(0em);
+}
+#scape .hero.wound,#scape .hero.kill{
+  content:url('../assets/Fighting Scene/player/hero/fight_hero_sword_and_shield-hurt.gif');
+}
+#scape .hero.cast{
+  content:url('../assets/Fighting Scene/player/hero/fight_hero_sword_and_shield-spell.gif');
+}
+@keyframes flee{
+  0%{transform:translateX(0em);}
+  100%{transform:translateX(-30em);}
+}
+#scape .hero.flight{
+  content:url('../assets/Fighting Scene/player/hero/fight_hero_sword_flee.gif');
+  transform:translateX(-30em);
+  animation:flee 2s 1 linear;
+}
+@keyframes attack{
+  0%{transform:translateX(0em) scaleX(-1);}
+  100%{transform:translateX(-5em) scaleX(-1);}
+}
+#scape .unit.attack:last-of-type,#scape .unit.castattack:last-of-type{
+  animation:attack .5s 1;
+  transform:translateX(-5em) scaleX(-1);
+}
+@keyframes dodge{
+  0%{transform:translateX(0em);}
+  50%{transform:translateX(+3em);}
+  100%{transform:translateX(0em);}
+}
+#scape .unit.dodge:last-of-type,#scape .unit.castdodge:last-of-type{
+  animation:dodge .5s 1;
+  transform:translateX(0em) scaleX(-1);
+}
+@keyframes wounded{
+  0%{filter:brightness(100%);}
+  100%{filter:brightness(10%);}
+}
+#scape .unit.wound{
+  animation:wounded 1s 1;
+  filter:brightness(10%);
+}
+@keyframes die{
+  0%{opacity:1;}
+  50%{opacity:0;}
+}
+#scape .unit.kill{
+  animation:die 3s 1;
+  opacity:0;
+}
+@keyframes casting{
+  50%{filter:brightness(3);}
+}
+#scape .unit.cast{
+  animation:casting .5s infinite;
+}
+#scape .unit.slime{
+  content:url('../assets/enemies/slimes/slime1.gif');
+}
+#scape .unit.slimer{
+  content:url('../assets/enemies/slimes/slime2.gif');
+}
+#scape .unit.livingteapot{
+  content:url('../assets/enemies/living_armor/living_teacan1_idle.gif');
+}
+#scape .unit.livingsword{
+  content:url('../assets/enemies/living_armor/living_sword1_idle.gif');
+}
+#scape .unit.livingarmor{
+  content:url('../assets/enemies/living_armor/living_armor1_idle_down.gif');
+}
+#scape .unit.golem{
+  content:url('../assets/enemies/golem/stonegolem1_idle_down.gif');
+}
